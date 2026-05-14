@@ -1,0 +1,23 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #f5f7fb; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.auth-container { width: 100%; max-width: 420px; margin: 0 auto; }
+.auth-card { background: #ffffff; border-radius: 20px; padding: 40px 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: left; }
+.auth-title { font-size: 24px; font-weight: 700; color: #1a1a2e; margin-bottom: 32px; letter-spacing: -0.5px; }
+.auth-alert { padding: 12px 16px; border-radius: 10px; margin-bottom: 20px; font-size: 14px; }
+.auth-alert.error { background: #fff0f0; color: #b71c1c; border: 1px solid #f5c6cb; }
+.auth-alert.success { background: #e8f5e9; color: #1b5e20; border: 1px solid #c8e6c9; }
+.auth-alert.success a { color: #1b5e20; font-weight: 600; }
+.input-group { position: relative; margin-bottom: 20px; }
+.input-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #9aa0b4; font-size: 16px; }
+.input-group input, .input-group select { width: 100%; padding: 14px 16px 14px 48px; border: 1.5px solid #e2e5ed; border-radius: 12px; font-size: 15px; color: #333; background: #f8f9fc; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+.input-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239aa0b4' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-5-5h10l-5 5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; background-size: 12px; appearance: none; }
+.input-group input:focus, .input-group select:focus { border-color: #5b6af0; box-shadow: 0 0 0 3px rgba(91,106,240,0.15); background: #fff; }
+.forgot-link { text-align: right; margin-bottom: 24px; }
+.forgot-link a { color: #5b6af0; font-size: 13px; text-decoration: none; font-weight: 500; }
+.forgot-link a:hover { text-decoration: underline; }
+.auth-btn { width: 100%; padding: 14px 24px; background: #5b6af0; color: #fff; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.2s, transform 0.1s; }
+.auth-btn:hover { background: #4a5ad9; }
+.auth-btn:active { transform: scale(0.98); }
+.auth-footer { text-align: center; margin-top: 24px; font-size: 14px; color: #777; }
+.auth-footer a { color: #5b6af0; font-weight: 600; text-decoration: none; }
+.auth-footer a:hover { text-decoration: underline; }

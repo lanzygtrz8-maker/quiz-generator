@@ -1,0 +1,350 @@
+/* ========== GLOBAL RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* ========== HEADER (Unibersidad) ========== */
+.header {
+  background: #0f172a;  /* dark navy */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 14px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+.header .logo i {
+  font-size: 32px;
+  color: #fbbf24;  /* gold accent */
+}
+.header .system-name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* ========== LAYOUT WRAPPER ========== */
+.wrapper {
+  display: flex;
+  min-height: calc(100vh - 62px);
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.04);
+  flex-shrink: 0;
+  padding: 24px 0;
+}
+.sidebar .user-info {
+  padding: 0 24px 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #374151;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  padding: 12px 24px;
+  margin: 2px 0;
+  transition: background 0.2s;
+  border-radius: 0;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sidebar ul li:hover {
+  background: #f9fafb;
+}
+.sidebar ul li a i {
+  width: 20px;
+  text-align: center;
+  color: #6b7280;
+}
+.sidebar .divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 12px 20px;
+}
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
+  flex: 1;
+  padding: 32px;
+  background: #f3f4f6;
+}
+
+/* ========== CARD ========== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  margin-bottom: 28px;
+  border: 1px solid #f1f1f1;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1;
+}
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+}
+.btn-success {
+  background: #059669;
+  color: #fff;
+}
+.btn-success:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(5,150,105,0.3);
+}
+.btn-danger {
+  background: #dc2626;
+  color: #fff;
+}
+.btn-danger:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220,38,38,0.3);
+}
+.btn-outline {
+  background: #fff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+.btn-outline:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+/* ========== FORMS & INPUTS ========== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #f9fafb;
+  color: #111827;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  margin-bottom: 16px;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+  background: #fff;
+}
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ========== TABLES ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  margin-bottom: 20px;
+}
+table th {
+  background: #f8fafc;
+  color: #374151;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+table td {
+  padding: 12px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
+}
+table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ========== ALERTS ========== */
+.alert {
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.alert.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.alert.success {
+  background: #f0fdf4;
+  color: #14532d;
+  border: 1px solid #bbf7d0;
+}
+.alert.info {
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+/* ========== UTILITIES ========== */
+.mt-2 { margin-top: 16px; }
+.mb-2 { margin-bottom: 16px; }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4b5563;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: #2563eb;
+}
+.back-link i {
+  font-size: 16px;
+}
+
+/* ========== STICKY SIDEBAR (profile at iba pang pahina) ========== */
+html, body {
+  height: 100%;
+  overflow: hidden;    /* pigilan ang page-level scroll */
+}
+
+.wrapper {
+  height: calc(100vh - 62px);  /* 62px = taas ng header */
+  overflow: hidden;
+}
+
+.main-content {
+  overflow-y: auto;    /* ito lang ang mag-i-scroll */
+  height: 100%;
+}
+
+.sidebar {
+  height: 100%;        /* punuin ang natitirang vertical space */
+  overflow-y: auto;    /* kung humaba ang menu, mag-i-scroll din ito */
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .main-content {
+    padding: 16px;
+    height: auto;
+    overflow: visible;
+  }
+  html, body {
+    overflow: auto;
+  }
+}
