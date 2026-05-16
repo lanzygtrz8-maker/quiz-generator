@@ -1,10 +1,6 @@
 # Environment file with secret keys
 .env
 
-# Composer lock file (optional, but keep composer.lock for reproducibility; puwede ring isama)
-# Sa case study, mas magandang isama ang composer.lock para ma-replicate ang eksaktong bersyon.
-# Ngunit tandaan: ang vendor folder ay muling mabubuo sa pamamagitan ng composer install.
-
 # IDE / editor settings
 .vscode/
 .idea/
